@@ -36,7 +36,6 @@ public class VoiceJoinEvent extends ListenerAdapter {
             }
         }
 
-        // Find the lowest unused number
         int newNumber = 1;
         while (usedNumbers.contains(newNumber)) {
             newNumber++;
