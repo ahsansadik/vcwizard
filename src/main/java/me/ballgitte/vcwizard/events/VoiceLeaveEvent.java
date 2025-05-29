@@ -30,7 +30,7 @@ public class VoiceLeaveEvent extends ListenerAdapter {
                         }
                     }
 
-                    // Sort by existing number suffix
+                    
                     matchingChannels.sort(Comparator.comparingInt(vc -> {
                         String name = vc.getName();
                         try {
@@ -40,7 +40,7 @@ public class VoiceLeaveEvent extends ListenerAdapter {
                         }
                     }));
 
-                    // Rename all remaining matching channels
+                    
                     for (int i = 0; i < matchingChannels.size(); i++) {
                         matchingChannels.get(i).getManager().setName(prefix + (i + 1)).queue();
                     }
